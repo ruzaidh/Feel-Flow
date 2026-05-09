@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feel Flow</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-fire-flame-curved"></i>
+                <h2>Feel Flow</h2>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="#" class="active"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i> Search</a>
+                <a href="#"><i class="fa-solid fa-book"></i> Your Library</a>
+            </nav>
+
+            <div class="library-section">
+                <div class="action-links">
+                    <a href="#"><i class="fa-solid fa-square-plus"></i> Create Playlist</a>
+                    <a href="#"><i class="fa-solid fa-heart"></i> Liked Songs</a>
+                </div>
+                <hr class="divider">
+                <div class="playlist-links">
+                    <a href="#">Chill Vibes</a>
+                    <a href="#">Workout</a>
+                    <a href="#">Focus Mode</a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="topbar">
+                <div class="nav-arrows">
+                    <button><i class="fa-solid fa-chevron-left"></i></button>
+                    <button><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                <div class="user-profile">
+                    <button class="upgrade-btn">Upgrade</button>
+                    <div class="profile-icon">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                </div>
+            </header>
+
+            <section class="content-scroll">
+                <h2 class="section-title">Good Evening</h2>
+                <div class="quick-picks" id="quick-picks-container">
+                    <!-- Dynamic Quick Picks will be inserted here -->
+                </div>
+
+                <h2 class="section-title">Made For You</h2>
+                <div class="song-grid" id="song-grid-container">
+                    <!-- Dynamic Songs will be inserted here -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Bottom Player -->
+        <footer class="player">
+            <div class="now-playing" id="now-playing">
+                <img src="" alt="Album Art" id="current-cover" class="hidden">
+                <div class="track-info">
+                    <h4 id="current-title">Feel Flow</h4>
+                    <p id="current-artist">Select a song to start</p>
+                </div>
+                <button class="like-btn"><i class="fa-regular fa-heart"></i></button>
+            </div>
+
+            <div class="player-controls">
+                <div class="control-buttons">
+                    <button id="shuffle"><i class="fa-solid fa-shuffle"></i></button>
+                    <button id="prev"><i class="fa-solid fa-backward-step"></i></button>
+                    <button id="play" class="play-main"><i class="fa-solid fa-circle-play"></i></button>
+                    <button id="next"><i class="fa-solid fa-forward-step"></i></button>
+                    <button id="repeat"><i class="fa-solid fa-repeat"></i></button>
+                </div>
+                <div class="playback-bar">
+                    <span id="current-time">0:00</span>
+                    <div class="progress-container" id="progress-container">
+                        <div class="progress" id="progress"></div>
+                    </div>
+                    <span id="total-time">0:00</span>
+                </div>
+            </div>
+
+            <div class="volume-controls">
+                <i class="fa-solid fa-microphone"></i>
+                <i class="fa-solid fa-list"></i>
+                <i class="fa-solid fa-desktop"></i>
+                <i class="fa-solid fa-volume-high"></i>
+                <div class="volume-slider-container">
+                    <div class="volume-slider" id="volume-slider"></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- Audio Element -->
+    <audio id="audio-player"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
